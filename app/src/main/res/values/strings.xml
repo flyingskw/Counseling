@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">상담가계부</string>
+    <string name="textName">상담기록</string>
+    <string name="plus">+</string>
+    <string name="cal">날짜가 표시됩니다.</string>
+
 </resources>
