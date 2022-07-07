@@ -3,10 +3,7 @@ package com.example.counseling
 import android.content.Intent
 import android.view.View
 import android.os.Bundle
-import android.widget.CalendarView
-import android.widget.TextView
-import android.widget.Toast
-import android.widget.Button
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 
 
@@ -15,6 +12,8 @@ class MainActivity : AppCompatActivity() {
     // 변수 선언 왜하지?? 일단 이름표를 박는 건가??
     lateinit var calendarView: CalendarView
     lateinit var tv_text: TextView
+    lateinit var contextEditText: EditText
+
 
     //이건 그냥 기본으로 있는 애 같은 느낌?
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,10 +23,13 @@ class MainActivity : AppCompatActivity() {
         // 변수에서 언급한 애가 누구인지 xml과 연결시켜주는 작업
         calendarView = findViewById(R.id.calendarView)
         tv_text = findViewById(R.id.tv_text)
+        contextEditText = findViewById(R.id.content)
 
         //내용 넣기 => 어떤 내용이 텍스트 박스에 뜰지 기능을 주는 아이들 필요한 기능 구글링으로 넣나??
         calendarView.setOnDateChangeListener { view, year, month, dayOfMonth ->
         tv_text.text = String.format("%d / %d / %d", year, month + 1, dayOfMonth)
+        contextEditText.visibility = View.VISIBLE
+
 
 
         }
